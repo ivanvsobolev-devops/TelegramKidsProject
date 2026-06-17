@@ -1,23 +1,25 @@
 # System Overview
 
-## Architecture
+## MVP Architecture
 
-Child App
-    |
-    v
-Backend API
-    |
-    +---- Parent Android App
-    |
-    +---- Telegram Bot
-    |
-    +---- Telegram API
+```mermaid
+flowchart LR
+    Child[Child Android App] -->|HTTPS| Backend[Backend API]
+    Parent[Parent Android App] -->|HTTPS| Backend
+    Child -->|TDLib / MTProto| Telegram[Telegram API]
+    Backend --> Data[(DynamoDB)]
+    Backend --> Events[EventBridge]
+    Backend --> Identity[Cognito]
+    Backend -. optional .-> Bot[Telegram Bot API]
+```
 
 ## Principle
 
 Backend is the single source of truth.
 
 All approval decisions are enforced by backend services.
+
+The child app executes Telegram joins only after backend approval because the child Telegram session is stored on the child device for MVP.
 
 ## Core Domains
 
@@ -45,3 +47,12 @@ Design for:
 - Multiple children per family
 - Multiple parents per family
 - Multiple approval interfaces
+
+## Detailed Architecture
+
+- [MVP Architecture](mvp-architecture.md)
+- [Child App Architecture](child-app-architecture.md)
+- [Parent App Architecture](parent-app-architecture.md)
+- [Backend Architecture](backend-architecture.md)
+- [Telegram Integration Architecture](telegram-integration-architecture.md)
+- [AWS Infrastructure Architecture](aws-infrastructure-architecture.md)

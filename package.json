@@ -1,0 +1,17 @@
+{
+  "name": "telegram-kids-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "./scripts/bootstrap.sh",
+    "format": "./scripts/format.sh",
+    "lint": "./scripts/lint.sh",
+    "test": "./scripts/test.sh",
+    "build": "./scripts/build.sh",
+    "backend:build": "npm --prefix services/backend run build",
+    "backend:lint": "npm --prefix services/backend run lint",
+    "backend:test": "npm --prefix services/backend test",
+    "terraform:fmt": "terraform -chdir=infra/terraform fmt -recursive -check",
+    "terraform:validate": "terraform -chdir=infra/terraform/environments/dev init -backend=false && terraform -chdir=infra/terraform/environments/dev validate"
+  }
+}
