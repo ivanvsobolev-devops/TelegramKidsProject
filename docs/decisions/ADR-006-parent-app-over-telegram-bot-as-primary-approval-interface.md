@@ -4,6 +4,8 @@
 
 Proposed
 
+Superseded by ADR-011 for the bot-first MVP.
+
 ## Context
 
 The MVP requires parents to authenticate, view pending approvals, approve or reject requests, and review approval history. The roadmap also lists a Telegram bot as a future or auxiliary interface.

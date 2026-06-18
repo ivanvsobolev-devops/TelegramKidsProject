@@ -14,6 +14,8 @@ Specification template:
 
 Examples:
 
+- [Onboarding](onboarding.md)
+- [MVP Bot Approval Flow](mvp-bot-approval-flow.md)
 - telegram-auth.md
 - join-approval-flow.md
 - parent-notifications.md

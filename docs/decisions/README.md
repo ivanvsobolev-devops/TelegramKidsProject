@@ -30,3 +30,5 @@ No major architectural change should be implemented without an ADR.
 - [ADR-008: Use Cognito for Parent Identity](ADR-008-use-cognito-for-parent-identity.md)
 - [ADR-009: Use EventBridge for Approval Workflow Events](ADR-009-use-eventbridge-for-approval-workflow-events.md)
 - [ADR-010: Flutter for MVP Mobile Apps](ADR-010-flutter-for-mvp-mobile-apps.md)
+- [ADR-011: Telegram Bot as MVP Parent Approval Interface](ADR-011-telegram-bot-as-mvp-parent-approval-interface.md)
+- [ADR-012: Backend-Executed Telegram Joins for Bot MVP](ADR-012-backend-executed-telegram-joins-for-bot-mvp.md)

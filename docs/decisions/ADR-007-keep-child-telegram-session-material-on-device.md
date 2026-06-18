@@ -4,6 +4,8 @@
 
 Proposed
 
+Superseded by ADR-012 for the bot-first MVP.
+
 ## Context
 
 Telegram Kids needs a real Telegram user session for the child app to provide Telegram client behavior and execute approved joins. That session includes sensitive Telegram authentication material managed by TDLib.

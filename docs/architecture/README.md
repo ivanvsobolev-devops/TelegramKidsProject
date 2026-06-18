@@ -3,6 +3,7 @@
 ## MVP Architecture Documents
 
 - [MVP Architecture](mvp-architecture.md)
+- [MVP Bot Architecture](mvp-bot-architecture.md)
 - [Child App Architecture](child-app-architecture.md)
 - [Parent App Architecture](parent-app-architecture.md)
 - [Backend Architecture](backend-architecture.md)

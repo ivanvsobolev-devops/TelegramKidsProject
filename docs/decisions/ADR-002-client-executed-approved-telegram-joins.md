@@ -4,6 +4,8 @@
 
 Proposed
 
+Superseded by ADR-012 for the bot-first MVP.
+
 ## Context
 
 Telegram Kids needs delayed execution of group joins and channel subscriptions. A child may request access now, a parent may approve later, and the actual Telegram join should occur only after approval.
