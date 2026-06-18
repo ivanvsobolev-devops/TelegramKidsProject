@@ -1,5 +1,9 @@
 # Roadmap V2
 
+Bot-first MVP implementation plan:
+
+- [Implementation Roadmap](implementation-roadmap.md)
+
 ## Parent Experience
 
 - Multiple children
