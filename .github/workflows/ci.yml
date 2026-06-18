@@ -39,14 +39,39 @@ jobs:
       - name: Build
         run: npm run build
 
-  flutter:
-    name: Flutter Apps
+  telegram-bot:
+    name: Telegram Bot
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        app:
-          - apps/child_app
-          - apps/parent_app
+    defaults:
+      run:
+        working-directory: services/telegram_bot
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install
+        run: npm install
+
+      - name: Format
+        run: npm run format
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+  flutter:
+    name: Child Flutter App
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,24 +83,24 @@ jobs:
           cache: true
 
       - name: Install
-        working-directory: ${{ matrix.app }}
+        working-directory: apps/child_app
         run: |
           flutter create --platforms=android --no-pub .
           flutter pub get
 
       - name: Format
-        run: flutter format --set-exit-if-changed ${{ matrix.app }}
+        run: flutter format --set-exit-if-changed apps/child_app
 
       - name: Analyze
-        working-directory: ${{ matrix.app }}
+        working-directory: apps/child_app
         run: flutter analyze
 
       - name: Test
-        working-directory: ${{ matrix.app }}
+        working-directory: apps/child_app
         run: flutter test
 
       - name: Build Android debug APK
-        working-directory: ${{ matrix.app }}
+        working-directory: apps/child_app
         run: flutter build apk --debug
 
   terraform:

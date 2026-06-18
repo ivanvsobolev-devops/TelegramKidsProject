@@ -11,6 +11,9 @@
     "backend:build": "npm --prefix services/backend run build",
     "backend:lint": "npm --prefix services/backend run lint",
     "backend:test": "npm --prefix services/backend test",
+    "bot:build": "npm --prefix services/telegram_bot run build",
+    "bot:lint": "npm --prefix services/telegram_bot run lint",
+    "bot:test": "npm --prefix services/telegram_bot test",
     "telegram:spike": "npm --prefix services/backend run mtproto:spike --",
     "terraform:fmt": "terraform -chdir=infra/terraform fmt -recursive -check",
     "terraform:validate": "terraform -chdir=infra/terraform/environments/dev init -backend=false && terraform -chdir=infra/terraform/environments/dev validate"

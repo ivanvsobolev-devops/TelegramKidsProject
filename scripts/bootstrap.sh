@@ -13,13 +13,9 @@ require_command flutter
 require_command terraform
 
 npm install --prefix services/backend
+npm install --prefix services/telegram_bot
 
 pushd apps/child_app >/dev/null
-flutter create --platforms=android --no-pub .
-flutter pub get
-popd >/dev/null
-
-pushd apps/parent_app >/dev/null
 flutter create --platforms=android --no-pub .
 flutter pub get
 popd >/dev/null

@@ -7,9 +7,9 @@ Repository bootstrap for the Telegram Kids MVP.
 ```text
 apps/
   child_app/        Flutter child Telegram client shell
-  parent_app/       Flutter parent approval app shell
 services/
   backend/          TypeScript backend shell
+  telegram_bot/     Parent Telegram Bot shell
 infra/
   terraform/        Terraform infrastructure shell
 docs/               Product, architecture, specs, and ADRs
@@ -37,8 +37,8 @@ scripts/            Local build and validation scripts
 ## MVP Components
 
 - Child app: Flutter scaffold in `apps/child_app`.
-- Parent app: Flutter scaffold in `apps/parent_app`.
 - Backend: TypeScript scaffold in `services/backend`.
+- Parent Telegram Bot: Node.js scaffold in `services/telegram_bot`.
 - Infrastructure: Terraform scaffold in `infra/terraform`.
 
 No business logic is implemented yet.

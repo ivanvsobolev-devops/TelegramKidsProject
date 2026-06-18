@@ -2,12 +2,9 @@
 set -euo pipefail
 
 npm --prefix services/backend run lint
+npm --prefix services/telegram_bot run lint
 
 pushd apps/child_app >/dev/null
-flutter analyze
-popd >/dev/null
-
-pushd apps/parent_app >/dev/null
 flutter analyze
 popd >/dev/null
 
