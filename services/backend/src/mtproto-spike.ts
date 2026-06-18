@@ -39,7 +39,8 @@ interface DialogRow {
 }
 
 function printUsage(): void {
-  console.log(`
+  console.log(
+    `
 Telegram MTProto spike
 
 Usage:
@@ -67,7 +68,8 @@ Examples:
   npm --prefix services/backend run mtproto:spike -- channels
   npm --prefix services/backend run mtproto:spike -- join-channel --target telegram --execute
   npm --prefix services/backend run mtproto:spike -- join-invite --invite https://t.me/+abc123
-`.trim());
+`.trim(),
+  );
 }
 
 function getCommand(): SpikeCommand {
@@ -154,7 +156,10 @@ async function readSession(sessionFile: string): Promise<string> {
   }
 }
 
-async function saveSession(sessionFile: string, session: string): Promise<void> {
+async function saveSession(
+  sessionFile: string,
+  session: string,
+): Promise<void> {
   await mkdir(path.dirname(sessionFile), { recursive: true });
   await writeFile(sessionFile, `${session}\n`, { mode: 0o600 });
 }
@@ -209,7 +214,10 @@ async function authenticate(
   console.log(savedSession);
 }
 
-async function runDialogs(client: TelegramClient, limit: number): Promise<void> {
+async function runDialogs(
+  client: TelegramClient,
+  limit: number,
+): Promise<void> {
   const rows: DialogRow[] = [];
 
   for await (const dialog of client.iterDialogs({ limit })) {
@@ -219,7 +227,10 @@ async function runDialogs(client: TelegramClient, limit: number): Promise<void> 
   console.log(JSON.stringify({ count: rows.length, dialogs: rows }, null, 2));
 }
 
-async function runChannels(client: TelegramClient, limit: number): Promise<void> {
+async function runChannels(
+  client: TelegramClient,
+  limit: number,
+): Promise<void> {
   const rows: DialogRow[] = [];
 
   for await (const dialog of client.iterDialogs({ limit })) {
@@ -278,7 +289,9 @@ async function investigateJoinInvite(
   execute: boolean,
 ): Promise<void> {
   const hash = extractInviteHash(invite);
-  const checked = await client.invoke(new Api.messages.CheckChatInvite({ hash }));
+  const checked = await client.invoke(
+    new Api.messages.CheckChatInvite({ hash }),
+  );
 
   console.log(
     JSON.stringify(
@@ -299,7 +312,9 @@ async function investigateJoinInvite(
     return;
   }
 
-  const update = await client.invoke(new Api.messages.ImportChatInvite({ hash }));
+  const update = await client.invoke(
+    new Api.messages.ImportChatInvite({ hash }),
+  );
   console.log("Join result:");
   console.log(JSON.stringify(summarizeUpdates(update), null, 2));
 }

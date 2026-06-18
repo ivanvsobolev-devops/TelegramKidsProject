@@ -89,7 +89,7 @@ jobs:
           flutter pub get
 
       - name: Format
-        run: flutter format --set-exit-if-changed apps/child_app
+        run: dart format --set-exit-if-changed apps/child_app
 
       - name: Analyze
         working-directory: apps/child_app
