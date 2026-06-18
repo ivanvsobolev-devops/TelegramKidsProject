@@ -17,3 +17,7 @@ Examples:
 - telegram-auth.md
 - join-approval-flow.md
 - parent-notifications.md
+
+Reports:
+
+- [Telegram Validation Report](telegram-validation-report.md)

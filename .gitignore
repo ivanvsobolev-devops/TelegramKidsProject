@@ -36,3 +36,5 @@ override.tf.json
 .env
 .env.*
 !.env.example
+.telegram-mtproto-spike.session
+services/backend/.telegram-mtproto-spike.session

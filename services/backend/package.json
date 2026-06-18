@@ -9,10 +9,15 @@
     "format": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
     "format:write": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "mtproto:spike": "tsx src/mtproto-spike.ts",
     "test": "node --test --import tsx test/**/*.test.ts"
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "telegram": "^2.26.22"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
