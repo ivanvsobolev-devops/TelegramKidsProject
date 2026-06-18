@@ -4,7 +4,7 @@
 
 Proposed
 
-Superseded by ADR-011 for the bot-first MVP.
+Superseded by ADR-013 for the bot-first MVP.
 
 ## Context
 

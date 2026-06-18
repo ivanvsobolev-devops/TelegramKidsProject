@@ -32,3 +32,4 @@ No major architectural change should be implemented without an ADR.
 - [ADR-010: Flutter for MVP Mobile Apps](ADR-010-flutter-for-mvp-mobile-apps.md)
 - [ADR-011: Telegram Bot as MVP Parent Approval Interface](ADR-011-telegram-bot-as-mvp-parent-approval-interface.md)
 - [ADR-012: Backend-Executed Telegram Joins for Bot MVP](ADR-012-backend-executed-telegram-joins-for-bot-mvp.md)
+- [ADR-013: Parent Android App Deferred to V2](ADR-013-parent-android-app-deferred-to-v2.md)

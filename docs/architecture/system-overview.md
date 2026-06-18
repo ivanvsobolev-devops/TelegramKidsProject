@@ -5,7 +5,7 @@
 ```mermaid
 flowchart LR
     Child[Child Android App] -->|HTTPS| Backend[Backend API]
-    Parent[Parent Android App] -->|HTTPS| Backend
+    Parent[Parent Telegram Bot] -->|HTTPS| Backend
     Child -->|TDLib / MTProto| Telegram[Telegram API]
     Backend --> Data[(DynamoDB)]
     Backend --> Events[EventBridge]

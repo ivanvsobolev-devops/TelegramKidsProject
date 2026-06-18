@@ -1,8 +1,12 @@
 # Parent App Architecture
 
+## Status
+
+Deferred to V2.
+
 ## Purpose
 
-The parent app is the primary MVP interface for managing approval requests.
+The parent app is a future V2 interface for managing approval requests and family operations.
 
 ## Platform
 
@@ -90,3 +94,8 @@ MVP parent app does not authenticate directly to Telegram for child account cont
 - Telegram Bot secondary approval interface.
 - Web portal.
 - Weekly reports and analytics.
+
+## MVP Notes
+
+- The parent app is not part of the bot-first MVP.
+- Use the Telegram Bot for parent onboarding and approvals in MVP.

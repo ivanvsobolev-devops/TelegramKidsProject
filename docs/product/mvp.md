@@ -24,7 +24,7 @@ Restricted actions require parental approval.
 
 ## Parent Application
 
-Android application.
+Deferred to V2.
 
 Features:
 
@@ -33,6 +33,8 @@ Features:
 - Approve request
 - Reject request
 - Approval history
+
+The parent application is not part of the bot-first MVP. Use the Telegram Bot as the parent approval surface for MVP.
 
 ## Backend
 

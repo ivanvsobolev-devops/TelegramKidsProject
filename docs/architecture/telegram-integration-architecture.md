@@ -10,7 +10,7 @@ This document defines how Telegram Kids integrates with Telegram for MVP.
 flowchart LR
     Child[Child Android App] -->|TDLib / MTProto| TelegramApi[Telegram API]
     Child -->|approval requests and execution reports| Backend[Backend API]
-    Parent[Parent Android App] --> Backend
+    Parent[Parent Telegram Bot] --> Backend
     Bot[Telegram Bot Optional] -->|webhook| Backend
     Backend -->|optional notifications| BotApi[Telegram Bot API]
 ```

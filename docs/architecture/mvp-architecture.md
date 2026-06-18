@@ -1,5 +1,9 @@
 # MVP Architecture
 
+## Status
+
+Legacy app-first MVP architecture. The bot-first MVP is defined in [MVP Bot Architecture](mvp-bot-architecture.md) and ADR-013.
+
 ## Purpose
 
 This document defines the complete MVP architecture for Telegram Kids.
@@ -58,7 +62,7 @@ Non-responsibilities:
 
 ### Parent App
 
-The parent app is a Flutter application targeting Android for MVP parent authentication and approval workflows.
+The parent app was originally a Flutter application targeting Android for MVP parent authentication and approval workflows. In the bot-first MVP, this surface is deferred to V2.
 
 Responsibilities:
 
